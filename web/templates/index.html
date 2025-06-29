@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matilda - Your AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="logo">
+                <i class="fas fa-robot"></i> Matilda
+            </div>
+            <div class="controls">
+                <button id="clear-btn" title="Clear conversation">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+                <button id="theme-toggle" title="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will be inserted here -->
+        </div>
+        <div class="chat-input-container">
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Templates for message rendering -->
+    <template id="user-message-template">
+        <div class="message user-message">
+            <div class="message-content">
+                <div class="message-text"></div>
+                <div class="message-time"></div>
+            </div>
+            <div class="avatar">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </template>
+
+    <template id="assistant-message-template">
+        <div class="message assistant-message">
+            <div class="avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="message-content">
+                <div class="message-text"></div>
+                <div class="message-time"></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="thinking-template">
+        <div class="message assistant-message thinking">
+            <div class="avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="message-content">
+                <div class="message-text">
+                    <div class="thinking-indicator">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        // Store user and assistant names
+        const username = "{{ username }}";
+        const assistantName = "{{ assistant_name }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
+
