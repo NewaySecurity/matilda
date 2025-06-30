@@ -1,150 +1,208 @@
-# MATILDA - Your Personal AI Assistant
+# MATILDA - AI-Powered Video Generation Platform
 
-MATILDA (My Advanced Technological Intelligence with Language Discourse Abilities) is a female version of Jarvis, designed to be your personal AI assistant. Built using the Together.ai API for natural language processing capabilities, MATILDA can help you with various tasks through intelligent conversation.
+<div align="center">
+  <h1>🎬 MATILDA</h1>
+  <p><strong>AI-Powered Video Generation Platform</strong></p>
+  
+  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NewaySecurity/matilda)
+  [![GitHub Stars](https://img.shields.io/github/stars/NewaySecurity/matilda?style=social)](https://github.com/NewaySecurity/matilda/stargazers)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](https://www.typescriptlang.org/)
+</div>
 
-## Features
+## 🌟 Overview
 
-- 🧠 **Natural Language Understanding**: Powered by state-of-the-art LLM models through Together.ai
-- 💬 **Conversation Management**: Maintains context throughout your conversation
-- ⚙️ **Customizable Configuration**: Easily configure Matilda's behavior through environment variables
-- 👤 **Personalized Experience**: Addresses you by your preferred name
-- 🔍 **Contextual Responses**: Provides relevant information based on conversation history
+MATILDA is a sophisticated AI-powered platform that enables users to generate high-quality videos from text prompts. Built with cutting-edge technology and designed for ease of use, MATILDA makes video creation accessible to everyone.
 
-## Installation
+### ✨ Key Features
+
+- 🎥 **Text-to-Video Generation**: Transform your ideas into stunning videos using advanced AI
+- 🎨 **Intuitive Interface**: Clean, modern design built with React and Material-UI
+- ⚡ **Real-time Processing**: Track your video generation progress in real-time
+- 🎯 **High-Quality Output**: Generate videos in multiple resolutions and formats
+- 📱 **Responsive Design**: Works seamlessly on desktop and mobile devices
+- 🌙 **Dark/Light Theme**: Choose your preferred viewing experience
+- 🚀 **Production Ready**: Optimized for deployment and scaling
+
+## 🛠️ Technology Stack
+
+### Frontend
+- ⚛️ React 18 with TypeScript
+- 🎨 Material-UI (MUI) for components
+- 🔗 Axios for API communication
+- 📢 React-Toastify for notifications
+- 📱 Responsive design with modern CSS
+
+### Backend
+- 🐍 Python-based AI processing
+- 🌐 RESTful API architecture
+- ⚡ Async processing with status tracking
+- 📈 Scalable infrastructure
+
+## 🚀 Quick Start
 
 ### Prerequisites
+- Node.js 18 or higher
+- npm or yarn
+- Python 3.8+ (for backend)
 
-- Python 3.9 or higher
-- A Together.ai API key (sign up at [together.ai](https://together.ai) if you don't have one)
+### Installation
 
-### Setup
-
-1. Clone this repository:
-   ```
-   git clone https://github.com/yourusername/MATILDA.git
-   cd MATILDA
-   ```
-
-2. Create a virtual environment and activate it:
-   ```
-   python -m venv venv
-   
-   # On Windows
-   .\venv\Scripts\activate
-   
-   # On macOS/Linux
-   source venv/bin/activate
-   ```
-
-3. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-4. Set up your environment variables:
-   ```
-   # Copy the example .env file
-   copy .env.example .env
-   
-   # Edit the .env file with your preferred editor to add your API key
-   notepad .env
-   ```
-
-## Configuration
-
-MATILDA can be configured through environment variables in your `.env` file:
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `TOGETHER_API_KEY` | Your Together.ai API key | (Required) |
-| `TOGETHER_MODEL` | The model to use for responses | meta-llama/Llama-3.1-405b-instruct |
-| `MAX_TOKENS` | Maximum number of tokens in responses | 2048 |
-| `TEMPERATURE` | Response randomness (0.0-1.0) | 0.7 |
-| `VOICE_ENABLED` | Enable voice interaction (future feature) | false |
-| `USERNAME` | Your preferred name | User |
-
-## Usage
-
-### Basic Usage
-
-Run MATILDA from the command line:
-
+1. **Clone the repository:**
 ```bash
-python src/matilda.py
+git clone https://github.com/NewaySecurity/matilda.git
+cd matilda
 ```
 
-This will start an interactive session where you can chat with MATILDA.
-
-### Example Conversation
-
-```
-Initializing Matilda...
-Hello, I am Matilda. How may I assist you today, User?
-
-You: What can you help me with?
-
-Matilda: As your personal AI assistant, I can help you with a variety of tasks:
-
-1. Answer questions on a wide range of topics
-2. Provide information and explanations
-3. Assist with problem-solving
-4. Offer suggestions and recommendations
-5. Engage in casual conversation
-
-Just let me know what you need, and I'll do my best to assist you!
-
-You: Tell me a joke
-
-Matilda: Why don't scientists trust atoms?
-
-Because they make up everything!
-
-You: bye
-
-Matilda: Goodbye! Have a nice day.
+2. **Install frontend dependencies:**
+```bash
+cd frontend
+npm install
 ```
 
-## Project Structure
-
-```
-MATILDA/
-├── config/           # Configuration files
-├── src/              # Source code
-│   ├── __init__.py
-│   └── matilda.py    # Main Matilda assistant class
-├── tests/            # Unit tests
-├── .env.example      # Example environment variables
-├── .gitignore        # Git ignore file
-├── README.md         # This file
-└── requirements.txt  # Python dependencies
+3. **Start the development server:**
+```bash
+npm start
 ```
 
-## Future Enhancements
+4. **Open your browser** and navigate to `http://localhost:3000`
 
-- Voice interaction using text-to-speech and speech-to-text
-- Integration with other APIs for enhanced capabilities
-- Web interface for easier interaction
-- Scheduled tasks and reminders
-- Custom skills and plugins
+## 💻 Development
 
-## Troubleshooting
+### Frontend Commands
+```bash
+cd frontend
+npm start     # 🔥 Start development server
+npm test      # 🧪 Run tests
+npm run build # 📦 Build for production
+npm run eject # ⚠️  Eject from Create React App
+```
 
-**Issue**: API calls are not working.  
-**Solution**: Ensure your Together.ai API key is correctly set in the `.env` file.
+### Backend Setup
+```bash
+pip install -r requirements.txt
+python run_web.py
+```
 
-**Issue**: Dependencies fail to install.  
-**Solution**: Try installing dependencies one by one or check your internet connection.
+## 🌐 Deployment
 
-## License
+MATILDA is configured for easy deployment on modern platforms:
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Netlify (Recommended)
+1. Connect your GitHub repository to Netlify
+2. Set build command: `cd frontend && npm run build`
+3. Set publish directory: `frontend/build`
+4. Deploy! 🚀
 
-## Acknowledgments
+### Environment Variables
+```env
+REACT_APP_API_URL=https://api.matilda.acorn
+REACT_APP_ENVIRONMENT=production
+REACT_APP_SITE_URL=https://www.matilda.acorn
+```
 
-- Together.ai for providing the LLM API
-- The open-source community for inspiration and tools
+## 🌍 Live Demo
+
+🔗 **Coming Soon**: [www.matilda.acorn](https://www.matilda.acorn)
+
+## 📡 API Documentation
+
+### Generate Video
+```http
+POST /api/generate-video
+Content-Type: application/json
+
+{
+  "prompt": "A serene sunset over mountains with birds flying",
+  "duration": 10,
+  "quality": "hd"
+}
+```
+
+### Response
+```json
+{
+  "success": true,
+  "message": "Video generation started",
+  "data": {
+    "requestId": "abc123",
+    "status": "processing",
+    "estimatedCompletionTime": "2-3 minutes"
+  }
+}
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Development Workflow
+1. 🍴 Fork the repository
+2. 🌿 Create a feature branch: `git checkout -b feature/amazing-feature`
+3. ✨ Make your changes
+4. 🧪 Run tests: `npm test`
+5. 💾 Commit your changes: `git commit -m 'Add amazing feature'`
+6. 📤 Push to the branch: `git push origin feature/amazing-feature`
+7. 🔄 Open a Pull Request
+
+## 📋 Project Structure
+
+```
+matilda/
+├── frontend/                 # React frontend application
+│   ├── src/
+│   │   ├── components/      # Reusable UI components
+│   │   ├── types/          # TypeScript type definitions
+│   │   ├── services/       # API services
+│   │   └── ...
+│   ├── build/              # Production build output
+│   └── package.json
+├── src/                     # Backend Python source
+├── web/                     # Web server components
+├── config/                  # Configuration files
+├── tests/                   # Test suites
+├── .github/workflows/       # CI/CD pipelines
+└── DEPLOYMENT_GUIDE.md      # Detailed deployment instructions
+```
+
+## 📊 Roadmap
+
+- [ ] 🎬 Video editing capabilities
+- [ ] 🤖 Multiple AI model support
+- [ ] 📦 Batch processing
+- [ ] 🔒 API rate limiting
+- [ ] 👤 User authentication
+- [ ] 📋 Video templates
+- [ ] 💾 Export to various formats
+- [ ] 📱 Social media integration
+- [ ] 🎨 Custom styling options
+- [ ] 📈 Analytics dashboard
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙋‍♂️ Support
+
+- 📧 Email: support@matilda.acorn
+- 🐛 Issues: [GitHub Issues](https://github.com/NewaySecurity/matilda/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/NewaySecurity/matilda/discussions)
+- 📖 Documentation: [Wiki](https://github.com/NewaySecurity/matilda/wiki)
+
+## 🏆 Acknowledgments
+
+- Built with ❤️ by the [NewaySecurity](https://github.com/NewaySecurity) team
+- Powered by advanced AI video generation technology
+- Special thanks to the open-source community
+- Inspired by the democratization of AI tools
 
 ---
 
-Created with ❤️ by [Your Name]
+<div align="center">
+  <strong>MATILDA</strong> - Making AI video generation accessible to everyone.
+  
+  ⭐ Star us on GitHub — it helps!
+  
+  [Report Bug](https://github.com/NewaySecurity/matilda/issues) • [Request Feature](https://github.com/NewaySecurity/matilda/issues) • [Documentation](https://github.com/NewaySecurity/matilda/wiki)
+</div>
 
