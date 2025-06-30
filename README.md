@@ -103,7 +103,7 @@ REACT_APP_SITE_URL=https://www.matilda.acorn
 
 ## 🌍 Live Demo
 
-🔗 **Coming Soon**: [www.matilda.acorn](https://www.matilda.acorn)
+🔗 **Live Now**: [matilda-video-ai.netlify.app](https://matilda-video-ai.netlify.app)
 
 ## 📡 API Documentation
 
